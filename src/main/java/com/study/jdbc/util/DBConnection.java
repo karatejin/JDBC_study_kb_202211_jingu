@@ -19,7 +19,7 @@ public class DBConnection {
 		return instance;
 	}
 	
-	public Connection getConnection() {
+	public Connection getConnection() { /* getConnection() 리턴 자료형 Connection 객체이다.*/
 		Connection connection = null;
 		String url = null;
 		String username = null;
@@ -38,7 +38,7 @@ public class DBConnection {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("드라이버 로딩 실패!");
-		} catch (SQLException e) {			
+		} catch (SQLException e) {	/* connection 실패시 */		
 			e.printStackTrace();
 			System.out.println("데이터베이스 연결 실패!");
 		}
